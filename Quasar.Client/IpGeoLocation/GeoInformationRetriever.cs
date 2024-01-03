@@ -82,7 +82,7 @@ namespace Quasar.Client.IpGeoLocation
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://ipwho.is/");
-                request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0";
+                request.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0";
                 request.Proxy = null;
                 request.Timeout = 10000;
 
@@ -149,7 +149,7 @@ namespace Quasar.Client.IpGeoLocation
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.ipify.org/");
-                request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0";
+                request.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0";
                 request.Proxy = null;
                 request.Timeout = 5000;
 

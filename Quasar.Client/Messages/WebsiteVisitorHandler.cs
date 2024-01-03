@@ -38,7 +38,7 @@ namespace Quasar.Client.Messages
                     try
                     {
                         HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(url);
-                        request.UserAgent =
+                        request.Headers["User-Agent"] =
                             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A";
                         request.AllowAutoRedirect = true;
                         request.Timeout = 10000;
